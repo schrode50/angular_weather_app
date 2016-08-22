@@ -16,7 +16,7 @@ angular.module('WeatherAngular', [
 })
     .factory("weatherinfo", function($http){
       var getWeather = function(city){
-        return $http.get('http://api.openweathermap.org/data/2.5/weather?q='+ city + '&appid=e42d32af9555a899db7106b67e9e5aae' )
+        return $http.get('/api/location?city=' + city)
         //what we get back from server
         .then(function(report){
           return report;
