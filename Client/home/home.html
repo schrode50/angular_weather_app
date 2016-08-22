@@ -1,0 +1,12 @@
+<div class="home">
+  <h1>Get Weather!</h1>
+  <form ng-submit="submit(search)">
+    <input ng-model="search" ng-model-options="{debounce: 700}" type="text" name="location" placeholder="Enter city name" value="">
+  </form>
+  <div ng-controller='homeCtrl'>
+    <ul> <li ng-repeat="key in data">{{key.description}}</li>
+    </ul>
+    <ul> {{temp}}  </li>
+    </ul>
+  </div>
+</div>
