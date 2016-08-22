@@ -8,6 +8,7 @@ app.get('/api/location', function(req, res){
   res.send("we can get")
 })
 
-app.listen(4000, function(){
+app.set('port', process.env.PORT || 4000)
+app.listen(app.get('port'), function(){
   console.log("We are listening");
 })
